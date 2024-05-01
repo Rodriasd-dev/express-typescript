@@ -1,8 +1,8 @@
 import diaryData from '../data/diaries.json'
 import { DiaryEntry } from '../types/types'
 
-const diaries:Array<DiaryEntry>= diaryData as Array<DiaryEntry>
+const diaries: DiaryEntry[] = diaryData as DiaryEntry[]
 
 export const getEntries = () => diaries
 
-export const addEntry = () =>  null
+export const addEntry = () => null
