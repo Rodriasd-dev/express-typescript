@@ -1,6 +1,21 @@
 //Personalizacion de los tipos
-export type Weather = 'sunny' | 'rainy' | 'cloudy' | 'windy' | 'story'
-export type Visibility = 'great' | 'good' | 'ok' | 'poor'
+// export type Weather = 'sunny' | 'rainy' | 'cloudy' | 'windy' | 'story'
+// export type Visibility = 'great' | 'good' | 'ok' | 'poor'
+
+export enum Weather {
+  Sunny = 'sunny',
+  Rainy = 'rainy',
+  Cloudy = 'cloudy',
+  Windy = 'windy',
+  Story = 'story'
+}
+
+export enum Visibility {
+  Great = 'great',
+  Good = 'good', 
+  Ok = 'ok', 
+  Poor = 'poor'
+}
 
 //Tipos de datos que va a manejar los servicios de los diarios
 export interface DiaryEntry {
