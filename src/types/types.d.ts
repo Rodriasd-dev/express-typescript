@@ -22,3 +22,6 @@ export type NonSensitiveInfoDiaryEntry = Omit<DiaryEntry, 'comment'>
 // interface SpecialEntry extends DiaryEntry {
 //     flightNumber: number
 // }
+
+
+export type newDiaryEntry = Omit<DiaryEntry, 'id'>
