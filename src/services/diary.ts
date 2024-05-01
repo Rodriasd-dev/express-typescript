@@ -5,9 +5,15 @@ const diaries: DiaryEntry[] = diaryData as DiaryEntry[]
 
 export const getEntries = ():DiaryEntry[] => diaries
 
-export const findByid = (id:number):DiaryEntry|undefined  =>{
+export const findByid = (id:number):NonSensitiveInfoDiaryEntry|undefined  =>{
     const entry = diaries.find(d => d.id === id)
-    return entry
+
+    if(entry) {
+        const {comment,...restOfDiary} = entry
+        return restOfDiary
+    }
+
+    return undefined
 }
 
 export const getEntriesWithoutSensitiveInfo = ():NonSensitiveInfoDiaryEntry[] => {
@@ -22,5 +28,3 @@ export const getEntriesWithoutSensitiveInfo = ():NonSensitiveInfoDiaryEntry[] =>
 }
 
 export const addEntry = ():undefined => undefined
-
-
